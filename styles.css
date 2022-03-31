@@ -1,0 +1,188 @@
+:root {
+    /* Criando variáveis no CSS */
+    --branco-principal: #FFFFFF;
+    --cinza-secundário: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --cor-detalhes: #EC2F46;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    /* Seleciona todos os elementos HTML, mas não vai tão a fundo quanto o root */
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    /* OBS: Se a imagem fazer sentido para o usuário, por exemplo, no caso do uso de um leitor de tela, se deve inserir
+    a imagem no HTML, não CSS */
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat; /* A imagem do background não se repete para preencher a página completamente. */
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1em;
+    transition: 200ms;
+}
+
+.botao_primario {
+    background-color: var(--botao-azul);
+}
+
+.botao_primario:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    transition: 200ms;
+}
+
+.botao_secundario:hover {
+    background-color: var(--branco-principal);
+    color: #000;
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundário);
+}
+
+.container__titulo {
+    font-size: 28x;
+    font-weight: 700;
+    /* align-content: center; */
+    /* margin: 3em 1em 2em 1em; */
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    /* font-weight: 400;
+    font-size: 16px; 
+    É o padrão ;-;*/
+    color: var(--cinza-secundário);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex; /* mágico */
+    flex-direction: row; /* Já é o padrão */
+    justify-content: center;
+    list-style-type: none; /* Lembrar, para modificar os marcadores da lista */
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 0;
+    
+}
+
+.rodape__logo {
+    margin-bottom: 2em;
+}
+
+.lista__link {
+    margin: 0em 1em;
+    font-size: 16px;
+}
+
+.rodape__lista {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 1em 0 2em 0;
+}
+
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin: 1em 0;
+}
+
+.rodape__texto {
+    color: var(--cinza-secundário);
+    margin: 1em 0;
+    font-size: 14px;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: violet;
+}
