@@ -47,7 +47,7 @@ body {
     text-decoration: none;
     display: block;
     margin-bottom: 1em;
-    transition: 200ms;
+    transition: 2000ms;
 }
 
 .botao_primario {
@@ -57,6 +57,7 @@ body {
 .botao_primario:hover {
     background-color: var(--botao-azul-efeito);
     color: var(--cor-de-fundo);
+    transform: scale(1.2) rotate(15000deg);
 }
 
 .botao_secundario {
